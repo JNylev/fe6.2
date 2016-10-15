@@ -16,12 +16,12 @@ myApp.controller('addCarController', function ($scope, CarFactory, $routeParams)
         if (!$routeParams.id)
         {
             $scope.cars.id=null;
-            $scope.legend ="New Car!";
+            $scope.john ="New Car!";
         }
         else
         {
             $scope.cars=CarFactory.getCars()[$routeParams.id-1];
-            $scope.legend = "Edit Car!";
+            $scope.john = "Edit Car!";
         }
         
         $scope.edit=function()
@@ -54,7 +54,7 @@ myApp.factory('CarFactory', function () {
     };
     var addEditCar = function (newcar) {
         if (newcar.id === null) {
-            newcar.id = cars.length;
+            newcar.id = cars.length+1;
             cars.push(newcar);
         } else {
             for (var i = 0; i < cars.length; i++) {
