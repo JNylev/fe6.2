@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="demoApp" ng-controller="viewCarController">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+  
+
+</head>
+<body>
+<div class="container" >
+
+
+  <h1>{{title}}</h1>
+
+  <h2>Number of cars: {{cars.length}}</h2>
+  
+  <nav class="navbar navbar-default pull-left">
+      <div class="container">
+          <ul class="nav navbar-nav">
+              <li><a href="#home" >All vehicles</a></li>
+              <li><a href="#addVehicle" >Add vehicle</a></li>
+          </ul>
+      </div>
+      
+      
+      
+</nav>
+
+  
+</div>
+    <div ng-view>
+        
+    </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
